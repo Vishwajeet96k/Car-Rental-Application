@@ -60,6 +60,7 @@ export const createBooking = async (req, res) => {
       pickupDate,
       returnDate,
       price,
+      // status: "pending", 
     });
     res.json({ success: true, message: "Booking Created" });
   } catch (error) {
