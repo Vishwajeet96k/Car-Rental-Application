@@ -76,8 +76,13 @@ const ManageBookings = () => {
                 </td>
 
                 <td className='p-3 max-md:hidden'>
-                  <span className='bg-gray-100 px-3 py-1 rounded-full text-xs'>offline </span>
-
+                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+                    booking.paymentStatus === 'paid'
+                      ? 'bg-green-100 text-green-600'
+                      : 'bg-amber-100 text-amber-600'
+                  }`}>
+                    {booking.paymentStatus === 'paid' ? '✓ Paid' : 'Unpaid'}
+                  </span>
                 </td>
 
                 <td className='p-3'>
